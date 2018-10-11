@@ -1,0 +1,7 @@
+Step1:	Install Xampp and copy the directory - MajorProject to C:\xampp\htdocs.
+Step2:	Open browser and type the URL localhost:8080/MajorProject/, you will find the UI. Or,
+Step3:	Log onto magichome.ml where the UI is stored in cloud.
+Step4:	Connect Raspberry pi to any display and turn it on.
+Step5:	Now set the connections to light and fan as shown in the documentation or the screenshots.
+Step6:	Now run the code for the appliances i.e fan and light on the raspberry pi module.
+Step7:	Now you can operate the light and fan using the UI.

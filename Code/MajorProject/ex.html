@@ -1,0 +1,107 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js">
+</script>
+<style>
+ body {
+         background-color:#ffffff;
+         background-image:url('http://cranberrycove.ca/wp-content/uploads/2017/02/welcome-img.png');
+         background-repeat:no-repeat;
+         background-position:center;
+         background-size:auto;
+         font: bold 18px/25px Arial, sans-serif;
+         color:LightGray;
+     }
+#image1{
+display:block;
+width:50px;
+height:50px;
+position:absolute;
+left:530px;
+top:240px;
+right:50px;
+botom:60px;
+}
+#image2{
+display:none;
+width:50px;
+height:50px;
+position:absolute;
+left:530px;
+top:240px;
+right:50px;
+botom:60px;
+}
+#f1{
+display:block;
+width:50px;
+height:50px;
+position:absolute;
+left:700px;
+top:330px;
+right:50px;
+botom:50px;
+
+}
+#f2{
+display:none;
+width:50px;
+height:50px;
+position:absolute;
+left:700px;
+top:330px;
+right:50px;
+botom:50px;
+
+}
+
+</style>
+<script>
+function change(id){
+var x= document.getElementById("image1");
+var y= document.getElementById("image2")
+var value;
+if(id=="image1")
+{
+    value=1;
+            var xhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("demo").innerHTML = this.responseText;
+            }};
+    xhttp.open("GET", "ButtonStatus.php?light1="+value, true);
+    xhttp.send();
+x.style.display="none";
+y.style.display="block";
+}
+else{
+x.style.display="block";
+y.style.display="none";
+
+}
+}
+function changeFan(id){
+var x= document.getElementById("f1");
+var y= document.getElementById("f2")
+if(id=="f1")
+{
+x.style.display="none";
+y.style.display="block";
+}
+else{
+x.style.display="block";
+y.style.display="none";
+}
+}
+</script>
+</head>
+<body>
+<img src="download.jpg" id="image1" onclick="change(this.id)">
+<img src="41divnkkBVL._SL500_AC_SS350_.jpg" id="image2" onclick="change(this.id)">
+<img src="images.png" id="f1" onclick="changeFan(this.id)"  />
+<img src="giphy.gif" id="f2" onclick="changeFan(this.id)"  />
+<div id="demo">
+</div>
+</body>
+</html>
